@@ -1,6 +1,9 @@
 import "./App.css";
 import { useReducer } from "react";
-const reducer = (state, action) => {};
+const reducer = (state, action) => {
+  if (action.type === "new") return { money: state.money + 100 };
+  if (action.type === "fuel") return { money: state.money - 50 };
+};
 
 function App() {
   const initialState = { money: 1000 };
